@@ -1,65 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Skin Biopsy Report</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    width: 21cm;
-    height: 29.7cm;
-    margin: 0 auto;
-    padding: 10mm;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    background: white;
-    box-sizing: border-box;
-  }
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  #patient_details {
-    margin-bottom: 20px;
-    border: 1px solid black;
-    padding: 8px;
-  }
-  .test-detail {
-    margin-bottom: 10px;
-  }
-  .report-footer {
-    text-align: center;
-  }
-  .navigation {
-    text-align: center;
-    margin-top: 10px;
-  }
-</style>
-</head>
-<body>
-<div class="header">
-  <h1>HISTOPATHOLOGY REPORT</h1>
-</div>
-<div id="patient_details">
-  <p><strong>ABLAB Bill No:</strong> 124 | <strong>Lab. ID No:</strong> AB24-884</p>
-  <p><strong>Patient Name:</strong> Md. Monirul Islam | <strong>Age:</strong> 55 years | <strong>Sex:</strong> M</p>
-  <p><strong>Referred by:</strong> Prof. Dr. Biplob Kumar Das</p>
-  <p><strong>Specimen:</strong> Skin from right knee</p>
-  <p><strong>Date Received:</strong> 17.08.2024 | <strong>Date Reported:</strong> 20.08.2024</p>
-</div>
-<div id="gross_description" class="test-detail">
-  <strong>Gross Description:</strong> Specimen received in formalin labeled with patient name and ID number consists of an irregular piece of skin measuring 0.5x0.3x0.3 cm. Embedded as such.
-</div>
-<div id="microscopic_appearance" class="test-detail">
-  <strong>Microscopic Appearance:</strong> Sections show skin. The epidermis reveals moderate hyperkeratosis, parakeratosis, moderate acanthosis with regular elongation of rete ridges, thinning of the suprapapillary plate and thin granular layer.
-</div>
-<div id="comment" class="test-detail">
-  <strong>Diagnosis:</strong> Skin from right knee (Biopsy): Psoriasis.
-</div>
-<div class="report-footer">
-  <p>Dr. Prabir Kumar Saha</p>
-</div>
-<div class="navigation">
-  <button onclick="window.location.href = 'HistopathologyBiopsyReport.html';">Go to Endometrial Polyp Report</button>
-</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Skin Biopsy Report</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0 auto;
+        padding: 10mm;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        background: white;
+        box-sizing: border-box;
+        position: relative;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #report_information {
+        margin-bottom: 20px;
+        border: 1px solid black;
+        padding: 8px;
+        position: relative;
+        font-size: 16px;
+      }
+      .report-info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        text-align: right;
+        font-size: 16px;
+      }
+      .section {
+        margin-bottom: 15px;
+        padding: 0 20px; /* Equal spacing on left and right */
+        text-align: justify;
+        font-size: 16px;
+      }
+      .section strong {
+        display: block;
+        margin-bottom: 5px;
+      }
+      /* Doctor info at the bottom right */
+      .doctor-info {
+        position: absolute;
+        right: 10mm;
+        bottom: 10mm;
+        text-align: right;
+        font-size: 16px;
+      }
+      .doctor-info p {
+        margin: 0;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>HISTOPATHOLOGY REPORT</h1>
+    </div>
+
+    <div id="report_information">
+      <div class="report-info">
+        <p><strong>Report ID:</strong> 00000001</p>
+        <p><strong>Test ID:</strong> NB000001</p>
+        <p><strong>Patient ID:</strong> 00000007</p>
+        <p><strong>Billing Date:</strong> 17.08.2024</p>
+        <p><strong>Report Printing Date:</strong> 20.08.2024</p>
+      </div>
+      <p>
+        <strong>ABLAB Bill No:</strong> 124 |
+        <strong>Lab. ID No:</strong> AB24-884
+      </p>
+      <p>
+        <strong>Patient Name:</strong> Patient with all testes |
+        <strong>Age:</strong> 23 | <strong>Sex:</strong> Male
+      </p>
+      <p>
+        <strong>Address:</strong> Mohakhali, Dhaka |
+        <strong>Phone:</strong> 000-1234
+      </p>
+      <p>
+        <strong>Blood Group:</strong> A+ |
+        <strong>Date of Birth:</strong> 1997-11-22
+      </p>
+      <p><strong>Referred by:</strong> Prof. Dr. Biplob Kumar Das</p>
+    </div>
+
+    <!-- Unique sections for each report detail -->
+    <div id="gross_description_section" class="section">
+      <div class="test-detail-1"><strong>Gross Description:</strong></div>
+      <div id="gross_description_content">
+        The specimen received in formalin labeled with the patient name and ID
+        consists of an irregular piece of skin measuring 0.5x0.3x0.3 cm.
+        Embedded as such.
+      </div>
+    </div>
+
+    <div id="microscopic_appearance_section" class="section">
+      <div class="test-detail-2"><strong>Microscopic Appearance:</strong></div>
+      <div id="microscopic_appearance_content">
+        The epidermis reveals moderate hyperkeratosis, parakeratosis, moderate
+        acanthosis with regular elongation of rete ridges, thinning of the
+        suprapapillary plate and thin granular layer.
+      </div>
+    </div>
+
+    <div id="diagnosis_section" class="section">
+      <div class="test-detail-3"><strong>Diagnosis:</strong></div>
+      <div id="diagnosis_content">
+        Skin from right knee (Biopsy): Psoriasis.
+      </div>
+    </div>
+
+    <div id="comment_section" class="section">
+      <div class="test-detail-4"><strong>Comment:</strong></div>
+      <div id="comment_content">
+        The biopsy findings are consistent with chronic psoriasis, characterized
+        by hyperkeratosis and parakeratosis.
+      </div>
+    </div>
+
+    <div id="recommendation_section" class="section">
+      <div class="test-detail-5"><strong>Recommendation:</strong></div>
+      <div id="recommendation_content">
+        The patient may benefit from a consultation with a dermatologist for
+        long-term management and treatment options.
+      </div>
+    </div>
+
+    <div id="note_section" class="section">
+      <div class="test-detail-6"><strong>Note:</strong></div>
+      <div id="note_content">
+        The results should be interpreted in the clinical context. Additional
+        tests may be recommended based on the clinical evaluation.
+      </div>
+    </div>
+
+    <!-- Doctor info at the bottom right -->
+    <div class="doctor-info">
+      <p><strong>Dr. Prabir Kumar Saha</strong></p>
+      <p>Senior Consultant, Pathology</p>
+      <p>MBBS, FCPS (Histopathology)</p>
+      <p>Professor, XYZ Medical College</p>
+    </div>
+  </body>
 </html>
